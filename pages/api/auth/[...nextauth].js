@@ -11,7 +11,7 @@ async function refreshAccessToken(token)
       spotifyAPI.setAccessToken(token.accessToken);
       spotifyAPI.setRefreshToken(token.refreshToken);
 
-      //destructor response
+      //deconstruct the response
       const { body: refreshedToken } = await spotifyAPI.refreshAccessToken();
 
     }catch(error)
